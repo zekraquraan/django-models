@@ -4,8 +4,7 @@ from django.contrib.auth import get_user_model
 class Snack(models.Model):
     name=models.CharField(max_length=64,help_text="name of the snack")
     purchaser=models.ForeignKey(get_user_model(),on_delete=models.CASCADE)
-    rank=models.IntegerField()
-    desc=models.TextField(default="no des available")
+    desc=models.TextField(default="no desc available")
 
 
     def __str__(self):
